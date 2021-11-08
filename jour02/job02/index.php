@@ -1,7 +1,7 @@
 <?php
 
-$var = 0;
-while ($var <=1337){
+$var = -1;
+while ( $var <=1337 ){
 
     $var++;
 

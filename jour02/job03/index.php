@@ -9,7 +9,7 @@ for ( $var = 0 ; $var <=100 ; $var++ )
 
     elseif ( $var==42 ){ 
 
-        echo "La plateforme". '<br>';
+        echo "La plateforme_". '<br>';
 
 
     }
