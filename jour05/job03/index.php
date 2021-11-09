@@ -7,6 +7,4 @@ function gethello(){
 }
     echo gethello()
 
-
-
 ?>
