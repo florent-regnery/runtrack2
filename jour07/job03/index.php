@@ -1,30 +1,21 @@
 <?php
 
-    session_start();
+session_start();
 
-    // Si fermeture de session, actualiser la page
+if(isset($_POST["reset"])){
 
-    if(isset($_POST["reset"])){
+    session_destroy();
+}
 
-        session_destroy();
+elseif(isset($_POST["prénom"])){
 
-        header("Location: index.php");
-    }
-        // Definir session en post
+    $_SESSION["prénoms"][] = $_POST["prénom"];
 
-    elseif(isset($_POST["prenom"])){
+    foreach((array)$_SESSION["prénoms"] as $_SESSION["prénom"]){
 
-        $_SESSION["prenoms"] = $_POST["prénom"];
+        if(isset($_POST["prénom"])){
 
-        // parcours du tableau
-
-    foreach((array)$_SESSION["prenoms"] as $_SESSION["prenom"]){
-
-        if(isset($_POST["prenom"])){
-
-            // affichage
-
-            echo "$_SESSION[prenom]<br />";
+            echo "$_SESSION[prénom]<br />";
         }
     }
 
@@ -32,10 +23,10 @@
 
 
 ?>
-        <!-- formulaire + boutons -->
 
-<form action="#" method="post">
-    <input type="text" name='prenom' value="prenom">
+
+<form action="" method="post">
+    <input type="text" id="prénom" name='prénom' placeholder="Votre prénom">
     <button name="submit">Valider</button><br>
     <button name="reset" value="reset">Reset</button>
 </form>
