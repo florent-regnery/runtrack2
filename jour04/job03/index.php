@@ -1,20 +1,20 @@
 <?php
 
-echo '<br><u>Compteur de Get </u></br>';
+echo '<br><u>Compteur de Post </u></br>';
 
     $compteur = 0;
-if( $_GET == true ){
+if( $_POST == true ){
 
-// echo $_GET ["prenom"];
-// echo $_GET ["nom"];
+// echo $_POST ["prenom"];
+// echo $_POST ["nom"];
 
-    // compteur de Get + echo
+    // compteur de POST + echo
 
         $compteur ++;
         echo $compteur;
 }
 
-var_dump($_GET);
+var_dump($_POST);
 
 
 
@@ -33,7 +33,7 @@ var_dump($_GET);
     </head>
 <body>
     <h1>Formulaire</h1>
-    <form method="GET" , action="index.php" >
+    <form method="POST" , action="index.php" >
         <input type="text" name="prenom" placeholder="Prenom">
         <input type="text" name="nom" placeholder="Nom">
         <input type="submit" name="" value="Valider">

@@ -1,34 +1,74 @@
+<?php
 
-  
-<?php     
-   
-
-    // variables
-
-    $variables['string']['type'] = 'Chaîne de caractères';
-    $variables['string']['nom'] = 'string';
-    $variables['string']['valeur'] = 'texte..';
-
-    $variables['int']['type'] = 'nombres entiers';
-    $variables['int']['nom'] = 'int';
-    $variables['int']['valeur'] = '1,2,3..';
-
-    $variables['float']['type'] = 'nombres décimals';
-    $variables['float']['nom'] = 'float';
-    $variables['float']['valeur'] = '12.3,14.667..';
-
-    $variables['bool']['type'] = 'booléens';
-    $variables['bool']['nom'] = 'bool';
-    $variables['bool']['valeur'] = 'true/false';
-
-    
-    // echo $variables['string']['type']['nom']['valeur'];
-    // echo $variables['int']['type']['nom']['valeur'];
-    // echo $variables['float']['type']['nom']['valeur'];
-    // echo $variables['bool']['type']['nom']['valeur'];
-
-    var_dump($variables);
-    
-
+$bool = true ; 
+$num = 2 ;
+$str = " Hello all ";
+$a = 1.5 ;
 
 ?>
+
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Infos salles</title>
+    </head>
+
+    <body>
+    
+        <table>
+            <thead>
+
+                <tr>
+                    
+                    <th>Type</th>
+                    <th>Nom</th>
+                    <th>Valeur</th>
+                    
+                </tr>
+
+            </thead>
+
+            <tbody>
+                <tr>
+                
+                    <td>Booléen</td>
+                    <td>$bool</td>
+                    <td><?php echo $bool ?></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Entier</td>
+                    <td>$num</td>
+                    <td><?php echo $num ?></td>
+
+                </tr>
+
+                <tr>
+                    <td>Chaine de caractère</td>
+                    <td>$str</td>
+                    <td><?php echo $str ?></td>
+
+                </tr>
+
+                <tr>
+                    
+                    <td>Nombres à virgules flottantes </td>
+                    <td>$a</td>
+                    <td><?php echo $a ?></td>
+
+
+                </tr>
+
+
+            </tbody>
+
+        </table>
+
+    </body>
+</html>
